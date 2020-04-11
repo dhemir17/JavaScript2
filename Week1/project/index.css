@@ -1,0 +1,73 @@
+body{
+    background-color: orange;
+}
+
+
+#white{
+    background-color: white;
+    width: 850px;
+    height: 300px;
+    position: relative;
+    margin: auto;
+    top: 100px;
+    padding: 20px;
+    
+}
+#spacebar{
+    background-color: white;
+    color: white;
+    width: 350px;
+    height: 50px;
+    position: relative;
+    margin: auto;
+    top: 105px;
+    
+    
+}
+#lab{
+    color: orange;
+    position: absolute;
+    left: 80px;
+    top: 70px;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+#lab2{
+    color: orange;
+    position: absolute;
+    left: 640px;
+    top: 180px;
+    font-size: 20px;
+
+}
+#quote{
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    left: 700px;
+    top: 250px;
+
+
+}
+#google{
+    width: 40px;
+    position: relative;
+    top: 230px;
+    left: 50px;
+
+}
+#twitter{
+    width: 40px;
+    position: relative;
+    top: 230px;
+    left: 50px;
+}
+#quotation{
+    width: 30px;
+    position: absolute;
+    left: 40px;
+    top: 70px;
+}
