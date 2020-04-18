@@ -13,21 +13,21 @@
 */
 
 let img = document.querySelector('img');
-let pos = 0;
+let position = 0;
 let tour = false;
 const middlePoint = window.innerWidth / 2;
 const endPoint = window.innerWidth;
 let catTimer;
 
 function catWalk(){
-    if (pos > endPoint) {
-        pos =- img.width;
+    if (position > endPoint) {
+        position =- img.width;
         tour = false;
     }
-    pos += 10;
-    img.style.left = pos + "px";
+    position += 10;
+    img.style.left = position + "px";
 
-    if (pos > middlePoint && !tour){
+    if (position > middlePoint && !tour){
         tour = true;
         clearInterval(catTimer);
         img.src = "https://media1.tenor.com/images/2de63e950fb254920054f9bd081e8157/tenor.gif?itemid=10561424";

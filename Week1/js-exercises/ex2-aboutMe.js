@@ -12,18 +12,21 @@
 
 document.body.style.fontFamily = "Arial, sans-serif";
 
-const snick = document.querySelector('#nickname');
-const sfav = document.querySelector('#fav-food');
-const shome = document.querySelector('#hometown');
-snick.innerHTML = "Dhemir";
-sfav.innerHTML = "Chicken with Kori Souce";
-shome.innerHTML = "Izmir-Turkey";
+const sNickName = document.querySelector('#nickname');
+const sFavFood = document.querySelector('#fav-food');
+const sHome = document.querySelector('#hometown');
+sNickName.innerText = "dhemir";
+sFavFood.innerText = "Chicken with Kori Souce";
+sHome.innerText = "Izmir-Turkey";
 
 const ul = document.querySelector('ul');
 const ilArray = Array.from(ul.children);
 ilArray.forEach(li => {
     li.classList.add("list-item");
 })
+
+
+
 const img = document.createElement('img');
 img.src = "https://ca.slack-edge.com/T0EJTUQ87-UTWJHP9DW-2ee9500118ed-512";
 document.body.appendChild(img);

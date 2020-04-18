@@ -13,11 +13,10 @@ const myQuotes = [
     {quote : "Be the change that you wish to see in the world.", author : "Mahatma Gandhi"},
     {quote : "No one can make you feel inferior without your consent.", author : "Eleanor Roosevelt"}];
 function randomNum(){
-    let a = Math.floor(Math.random() * 6);
-    return a;
+    return Math.floor(Math.random() * (myQuotes.length));
 }
 button1.addEventListener('click',function(){
-    let a = randomNum();
-    quoteL.innerText = myQuotes[a].quote;
-    authorL.innerText = "-  " + myQuotes[a].author;
+    let random1 = randomNum();
+    quoteL.innerText = myQuotes[random1].quote;
+    authorL.innerText = "-  " + myQuotes[random1].author;
 })

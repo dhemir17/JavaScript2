@@ -23,17 +23,19 @@ function createBookList(books) {
   
   for(let i=0;i<3;i++){
     const li = document.createElement('li');
-    const t = document.createElement('p');
-    t.innerText = `${books[i].title} - ${books[i].author}`; 
-    li.appendChild(t);
+    const p = document.createElement('p');
+    p.innerText = `${books[i].title} - ${books[i].author}`; 
+    li.appendChild(p);
     const imgBook = document.createElement('img');
     imgBook.src = books[i].pic;
     imgBook.width = 200;
     li.appendChild(imgBook);
-    if(books[i].alreadyRead)
-    li.style.backgroundColor = 'green';
-    else
-    li.style.backgroundColor = 'red';
+    if(books[i].alreadyRead) {
+      li.style.backgroundColor = 'green';
+    }  
+    else {
+      li.style.backgroundColor = 'red';
+    }
     li.style.cssFloat = "left";
     li.style.padding = "10px";
     li.style.margin = "15px";
