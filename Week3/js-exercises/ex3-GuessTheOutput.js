@@ -19,3 +19,9 @@ const x = (function () {
 })();
 
 x();
+
+/* 
+X is declared as const but our a variable is declared by "let" and change 
+the value as 12 in the function. When we call x , our variable a (valued as 12)
+alerted by the window.
+*/
