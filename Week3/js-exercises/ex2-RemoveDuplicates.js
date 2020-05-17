@@ -14,7 +14,7 @@ does not return anything but removes any duplicate elements from the array.
 // WRITE YOUR FUNCTION HERE
 
 function removeDuplicates(arr){
-  arr.forEach((item, index, arr2) => {
+  arr.forEach((item) => {
     if ( arr2.indexOf(item) !== arr2.lastIndexOf(item)) {
         arr2.splice(arr2.lastIndexOf(item),1);
     }  
