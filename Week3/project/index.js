@@ -11,6 +11,8 @@ calcButton.addEventListener('click',function (){
    }
    if (billSharing.value === "1") {
         document.getElementById('each').innerText = "";   }
+   else {
+      document.getElementById('each').innerText = "each";
    let perc = 0;
     switch ( tipSelect.value) {
         case "30":
