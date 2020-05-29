@@ -30,9 +30,7 @@
  })
  
  function toggleClock(reset){
-   if (reset) {
-     
-   } else {
+   if (!reset) {
      if (isClockRunning === true) {
        isClockRunning = false;
      } else {
@@ -50,13 +48,9 @@
    let result = '';
    const seconds = secondsLeft % 60;
    const minutes = parseInt(secondsLeft / 60) % 60;
-   let hours = parseInt(secondsLeft / 3600);
-   function addLeadingZeroes(time) {
-     return time < 10 ? `0${time}` : time
-   }
-   if (hours > 0) result += `${hours}:`
-   result += `${addLeadingZeroes(minutes)} : ${addLeadingZeroes(seconds)}`
-   timeArea.innerText = result.toString();
+   
+   result += `${minutes.toString().padStart(2,'0')} : ${seconds.toString().padStart(2,'0')}` //padStart() method applied instead of functions
+   timeArea.innerText = result; //toString fixed.
    if (minutes == 0 && seconds == 0) {
      clearInterval(clockTimer);
      timeArea.innerText = "Time is up!";
@@ -65,7 +59,6 @@
  
  function upDownFunc() { 
    timeArea.innerText = `${sessionLength.textContent} : 00`;
-   console.log(typeof Number(sessionLength.textContent), Number(sessionLength.textContent));
    currentTimeLeftInSession = parseInt(sessionLength.textContent) * 60;
  }
  upButton.addEventListener('click', () => {
