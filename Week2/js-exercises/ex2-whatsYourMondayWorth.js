@@ -16,7 +16,7 @@ function dayWorth(tasks, hourlyRate) {
   // put your code in here, the function does returns a euro formatted string
   
   const mondaySalary = tasks
-  .map((salary) => salary.duration * hourlyRate / 60 )
+  .map((salary) => salary.duration / 60 * hourlyRate  )  //Edited as you offered :)
   .reduce((total,item) => total + item ,0 )
 
   let total = mondaySalary.toFixed(2);
