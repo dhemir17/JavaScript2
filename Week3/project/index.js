@@ -13,23 +13,9 @@ calcButton.addEventListener('click',function (){
         document.getElementById('each').innerText = "";   }
    else {
       document.getElementById('each').innerText = "each";
-   let perc = 0;
-    switch ( tipSelect.value) {
-        case "30":
-            perc = 30;
-            break;
-        case "20":
-            perc = 20;
-            break;
-        case "15":
-            perc = 15;
-            break;
-        case "10":
-            perc = 10;
-            break;
-        case "5":
-            perc = 5;
-    }
-    let result = Number(billMoney.value) * perc / 100 / Number(billSharing.value);
+      //Switch is removed with your help :)
+    let result = Number(billMoney.value) * tipSelect.value / 100 / Number(billSharing.value);
+    console.log(document.getElementById('tip-select').valueAsNumber);
+
     resultArea.innerText = "$" + result.toFixed(2);
 });
