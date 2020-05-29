@@ -11,11 +11,11 @@
 function createHTMLList(arr) {
   // your code goes in here
   const ul = document.getElementById('list');
-  const newArr = arr.map(hobby => {
+  arr.forEach(element => {     //no new array needed so I changed map methot as forEach.
     let listItem = document.createElement('li');
-    listItem.innerText = hobby;
+    listItem.innerText = element;
     ul.appendChild(listItem);
-  })
+  });
 }
 
 const myHobbies = [
@@ -25,7 +25,4 @@ const myHobbies = [
   'Hanging out with friends',
   'Going to the gym',
 ];
-
 createHTMLList(myHobbies);
-
-
